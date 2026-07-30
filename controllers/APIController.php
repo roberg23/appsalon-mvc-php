@@ -7,14 +7,9 @@ use Model\Servicio;
 
 class APIController{
     public static function index(){
-    header('Content-Type: application/json');
-
-    echo json_encode([
-        "mensaje" => "API funcionando"
-    ]);
-
-    exit;
-}
+        $servicios = Servicio::all();
+        echo json_encode($servicios);
+    }
 
     public static function guardar(){
         // Almacena la Cita y devuelve el ID
