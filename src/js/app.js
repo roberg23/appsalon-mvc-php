@@ -102,9 +102,9 @@ async function consultarAPI(){
     try {
         const url = 'http://localhost:3000/api/servicios';
         const resultado = await fetch(url);
-        console.log(resultado);
-        
-        // const servicios = await resultado.json();        
+        const servicios = await resultado.json();       
+        console.log(servicios);
+         
         // mostrarServicios(servicios);      
     } catch (error) {
         console.log(error);
