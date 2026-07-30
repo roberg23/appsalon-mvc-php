@@ -97,12 +97,14 @@ function paginaSiguiente(){
     })        
 }
 
-async function consultarAPI(){    
+async function consultarAPI() {
+
     try {
-        const url = '/api/servicios';
+        const url = 'http://localhost:3000/api/servicios';
         const resultado = await fetch(url);
-        const servicios = await resultado.json();                
-        mostrarServicios(servicios);      
+        const servicios = await resultado.json();
+        mostrarServicios(servicios);
+    
     } catch (error) {
         console.log(error);
     }
